@@ -28,4 +28,26 @@
   ```
   $ npx cap add iOS
   ```
+* Open iOS emulator with Capacitor
 
+```
+  $ npx cap open ios
+```
+
+- Always after a new Change you must run the ionic build command
+
+```
+  $ ionic build
+```
+
+- After the build now you will synchronize the app with Capacitor (Tip: You have to re tun in Xcode and android studio the project)
+
+```
+  $ ionic build &&  npx cap sync
+```
+
+- Hint If you only change HTML or CSS for fastest synchronization use
+
+```
+  $ ionic build && npx cap copy
+```
