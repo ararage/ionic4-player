@@ -21,12 +21,12 @@ export class RegisterPage {
     firstName: [
       { type: "required", message: "El nombre es requerido" },
       { type: "minlength", message: "Mínimo 2 letras para el Nombre" },
-      { type: "maxlength", message: "Máximo 20 letras para el Nombre" }
+      { type: "maxlength", message: "Máximo 30 letras para el Nombre" }
     ],
     lastName: [
       { type: "required", message: "El apellido es requerido" },
       { type: "minlength", message: "Mínimo 2 letras para el Apellido" },
-      { type: "maxlength", message: "Máximo 20 letras para el Apellido" }
+      { type: "maxlength", message: "Máximo 30 letras para el Apellido" }
     ],
     email: [
       { type: "required", message: "El email es requerido" },
@@ -51,7 +51,7 @@ export class RegisterPage {
         Validators.compose([
           Validators.required,
           Validators.minLength(2),
-          Validators.maxLength(20)
+          Validators.maxLength(30)
         ])
       ),
       lastName: new FormControl(
@@ -59,7 +59,7 @@ export class RegisterPage {
         Validators.compose([
           Validators.required,
           Validators.minLength(2),
-          Validators.maxLength(20)
+          Validators.maxLength(30)
         ])
       ),
       email: new FormControl(
