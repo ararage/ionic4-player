@@ -30,4 +30,4 @@ capacitor.config.json
 /platforms
 /plugins
 /www
-/environments
+/src/environments
