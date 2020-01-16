@@ -13,8 +13,16 @@ export class HomePage {
   artists: any = [];
   songs: any = [];
   albums: any = [];
-  song: any = {};
-  currentSong: any = {};
+  song: {
+    preview_url: string;
+    playing: boolean;
+    name: string;
+  } = {
+    preview_url: "",
+    playing: false,
+    name: ""
+  };
+  currentSong: HTMLAudioElement;
   newTime: any;
 
   slideOps = {
@@ -25,7 +33,9 @@ export class HomePage {
   };
 
   emptyObject = obj => {
-    return Object.entries(obj).length === 0 && obj.constructor === Object;
+    if (obj)
+      return Object.entries(obj).length === 0 && obj.constructor === Object;
+    return true;
   };
 
   constructor(
@@ -97,7 +107,7 @@ export class HomePage {
     this.song.playing = false;
   }
 
-  parseTime(time = "0.00") {
+  parseTime(time: number) {
     if (time) {
       const partTime = parseInt(time.toString().split(".")[0], 10);
       let minutes = Math.floor(partTime / 60).toString();

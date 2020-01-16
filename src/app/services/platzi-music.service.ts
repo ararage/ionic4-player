@@ -32,4 +32,8 @@ export class PlatziMusicService {
       .get(`${API}/albums/${albumId}/tracks?country=MX`)
       .toPromise();
   }
+
+  searchTracks(text) {
+    return this.http.get(`${API}/search?q=${text}&type=track`).toPromise();
+  }
 }

@@ -14,13 +14,13 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>
+        <ion-item (click)="goToHome()">
           Home
         </ion-item>
-         <ion-item>
+         <ion-item (click)="goToSports()">
           Sport
         </ion-item>
-        <ion-item>
+        <ion-item (click)="goToSettings()">
           Settings
         </ion-item>
         <ion-item (click)="logout()">

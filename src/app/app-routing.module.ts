@@ -34,8 +34,11 @@ const routes: Routes = [
       )
   },
   {
-    path: 'songs-album-modal',
-    loadChildren: () => import('./songs-album-modal/songs-album-modal.module').then( m => m.SongsAlbumModalPageModule)
+    path: "songs-album-modal",
+    loadChildren: () =>
+      import("./songs-album-modal/songs-album-modal.module").then(
+        m => m.SongsAlbumModalPageModule
+      )
   }
 ];
 

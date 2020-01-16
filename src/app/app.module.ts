@@ -14,6 +14,9 @@ import { SongsModalPageModule } from "./songs-modal/songs-modal.module";
 import { SongsAlbumModalPageModule } from "./songs-album-modal/songs-album-modal.module";
 
 // Plugins
+import { AgmCoreModule } from "@agm/core";
+
+import { environment } from "src/environments/environment";
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +28,10 @@ import { SongsAlbumModalPageModule } from "./songs-album-modal/songs-album-modal
     IonicStorageModule.forRoot(),
     SongsModalPageModule, // Modal Songs Module
     SongsAlbumModalPageModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.mapsKeyApi
+    })
   ],
   providers: [
     StatusBar,
